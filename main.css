@@ -6784,3 +6784,7 @@ body {
 .btn-about-me {
   margin-bottom: 15px;
 }
+.img-project-right {
+  margin-left: auto;
+  margin-right: 0;
+}

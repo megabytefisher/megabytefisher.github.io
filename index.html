@@ -1,95 +1,117 @@
 <html><head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="main.css" rel="stylesheet" type="text/css">
-    </head><body>
-        <div class="cover">
-            
-            <div class="background-image-fixed cover-image" style="background-image : url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Memphis_Beale_Street.jpg')"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center header-text">
-                        <h1 class="text-inverse">Kevin Fisher<br></h1>
-                        <p class="text-inverse">A swiss army knife of code</p>
-                        <br>
-                        <br>
-                        <a class="btn btn-lg btn-primary btn-about-me">About me</a>
-                    </div>
-                </div>
-            </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css">
+  </head><body>
+    <div class="cover">
+      <div class="background-image-fixed cover-image" style="background-image : url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Memphis_Beale_Street.jpg')"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center header-text">
+            <h1 class="text-inverse">Kevin Fisher
+              <br>
+            </h1>
+            <p class="text-inverse">A swiss army knife of code</p>
+            <br>
+            <br>
+            <a class="btn btn-lg btn-primary btn-about-me" id="about-me-button">About me</a>
+          </div>
         </div>
-        <div class="section"><div class="container"><div class="row"><div class="col-md-6"><div class="page-header"><h1>About me</h1></div></div><div class="col-md-6"><p class="text-left about-me" id="about-me">My passion is coding. I've worked in projects ranging from reverse engineering x86 code and delving deep into the Win32API to developing large backend servers running on the .NET platform. I love to teach myself new technologies and challenge myself with difficult projects. I am always working on some new personal project, &nbsp;and mainly open source ones. I consider myself a perpetual student.</p></div></div></div></div><div class="section"><div class="container"><div class="row"><div class="col-md-12"><h1>My projects</h1></div></div></div></div><div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="text-primary">Automaton</h1>
-                        <h3>A subtitle</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                            dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                            nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-                            enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-                            elementum semper nisi.</p>
-                    </div>
-                </div>
+      </div>
+    </div>
+    <div class="section" id="about-me">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="page-header">
+              <h1>About me</h1>
             </div>
+          </div>
+          <div class="col-md-6">
+            <p class="text-left">My passion is coding. I've worked in projects ranging from reverse engineering
+              x86 code and delving deep into the Win32API to developing large backend
+              servers running on the .NET platform. I love to teach myself new technologies
+              and challenge myself with difficult projects. I am always working on some
+              new personal project, &nbsp;and mainly open source ones. I consider myself
+              a perpetual student.</p>
+          </div>
         </div>
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1 class="text-primary">A title</h1>
-                        <h3>A subtitle</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                            dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                            nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-                            enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-                            elementum semper nisi.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>My projects</h1>
+          </div>
         </div>
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center text-primary">Team</h1>
-                        <p class="text-center">We are a group of skilled individuals.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
-                        <h3 class="text-center">John Doe</h3>
-                        <p class="text-center">Developer</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
-                        <h3 class="text-center">John Doe</h3>
-                        <p class="text-center">Developer</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
-                        <h3 class="text-center">John Doe</h3>
-                        <p class="text-center">Developer</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="img-responsive" src="https://megabytefisher.github.io/automaton_ex.png">
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-primary">Automaton</h1>
+            <h3>C#, C++, Java<br></h3>
+            <p>Automaton is a tool for automating Android apps. It is composed of two seperate projects: AutomatonHelper, which runs on the Android platform, and Automaton, which serves as a host as tool for setting up AutomatonHelper. The helper program hooks into private Android APIs that allow the app to do things like rapidly grab screenshots from the Android screen buffer or break down the on-screen UI hierarchy. Users run Automaton from a computer and supply it with C# scripts that perform whatever action the user wishes. The two programs communicate over a REST-like API.</p>
+          </div>
         </div>
-    
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="text-primary">Repair Shop iOS App</h1>
+            <h3>Objective-C</h3>
+            <p>In 2015, I worked for a local computer and iPhone repair shop. One day the owner saw me coding in my free time and asked me to make an iOS app. I quickly learned the basics of Objective-C and wrote the business's app in around a week. The app allowed users to perform basic tasks, such as requesting a quote and opening the Maps app with our location set. It also allowed users to easily call us or upload pictures of their device so that we could more easily identify the brand and model.</p>
+          </div>
+          <div class="col-md-6 text-left">
+            <img src="https://megabytefisher.github.io/iosapp_ex.png" class="img-responsive img-project-right">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center text-primary">Team</h1>
+            <p class="text-center">We are a group of skilled individuals.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+            <h3 class="text-center">John Doe</h3>
+            <p class="text-center">Developer</p>
+          </div>
+          <div class="col-md-4">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+            <h3 class="text-center">John Doe</h3>
+            <p class="text-center">Developer</p>
+          </div>
+          <div class="col-md-4">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+            <h3 class="text-center">John Doe</h3>
+            <p class="text-center">Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $("#about-me-button").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#about-me").offset().top
+            }, 500);
+        });
+    </script>
+  
 
 </body></html>
