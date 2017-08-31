@@ -1,151 +1,170 @@
-<html><head>
-    <title>Kevin Fisher</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="main.css" rel="stylesheet" type="text/css">
-  </head><body>
-    <div class="cover">
-      <div class="cover-image" style="background-image : url('https://scontent-dfw1-1.xx.fbcdn.net/v/t1.0-9/47110_4718840049883_870989169_n.jpg?oh=d6e3d0241992ea2399b514b326579646&amp;oe=57FADACF')"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center header-text">
-            <h1 class="text-inverse">Kevin Fisher
-              <br>
-            </h1>
-            <p class="text-inverse">A swiss army knife of code</p>
-            <a href="https://github.com/megabytefisher/"><i class="fa fa-3x fa-fw fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/kevin-fisher-263596120"><i class="fa fa-3x fa-fw hub fa-linkedin-square"></i></a>
-            <a href="mailto:megabytefisher@gmail.com"><i class="fa fa-3x fa-fw hub edin-square fa-at"></i></a>
-            <br>
-            <br>
-            <a class="btn btn-lg btn-primary btn-about-me" id="about-me-button">About me</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="about-me">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="page-header">
-              <h1>About me</h1>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <p class="text-left">My passion is coding. I've worked in projects ranging from reverse engineering
-              x86 code and delving deep into the Win32API to developing large backend
-              servers running on the .NET platform. I love to teach myself new technologies
-              and challenge myself with difficult projects. I am always working on some
-              new personal project, &nbsp;and mainly open source ones. I consider myself
-              a perpetual student.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>My projects</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img class="img-responsive" src="https://megabytefisher.github.io/automaton_ex.png">
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-primary">Automaton</h1>
-            <h3>C#, C++, Java - 2016
-              <br>
-            </h3>
-            <p>Automaton is a tool for automating Android apps. It is composed of two
-              seperate projects: AutomatonHelper, which runs on the Android platform,
-              and Automaton, which serves as a host as tool for setting up AutomatonHelper.
-              The helper program hooks into private Android APIs that allow the app to
-              do things like rapidly grab screenshots from the Android screen buffer
-              or break down the on-screen UI hierarchy. Users run Automaton from a computer
-              and supply it with C# scripts that perform whatever action the user wishes.
-              The two programs communicate over a REST-like API.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img class="img-responsive" src="https://megabytefisher.github.io/iosapp_ex.png">
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-primary">Repair Shop iOS App</h1>
-            <h3>Objective-C - 2015
-              <br>
-            </h3>
-            <p>In 2015, I worked for a local computer and iPhone repair shop. One day
-              the owner saw me coding in my free time and asked me to make an iOS app.
-              I quickly learned the basics of Objective-C and wrote the business's app
-              in around a week. The app allowed users to perform basic tasks, such as
-              requesting a quote and opening the Maps app with our location set. It also
-              allowed users to easily call us or upload pictures of their device so that
-              we could more easily identify the brand and model.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img class="img-responsive" src="https://megabytefisher.github.io/silentbreakpoints_ex.png">
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-primary">SilentBreakpoints</h1>
-            <h3>C, Win32API - 2014</h3>
-            <p>While analyzing and debugging a malware sample, I couldn't reliably find
-              a way to set breakpoints that the target program did not either unset or
-              detect. I started researching and devised a novel method of creating pseudo-breakpoints
-              by enabling a Windows feature called "data execution prevention" and setting
-              &nbsp;pages of memory so that they were not executable. This caused an
-              exception to be thrown when the target code was executed, allowing me to
-              set invisble breakpoints.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img class="img-responsive" src="https://megabytefisher.github.io/emulation_ex.png">
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-primary">Server Emulation Project</h1>
-            <h3>C# - 2012, 2013</h3>
-            <p>In 2012, I launched a project which aimed to completely reverse engineer
-              and reimplement a custom server for an existing online game. Through many
-              hours of work, I produced a game server which could host many clients at
-              once in an online world. I worked on this project for around a year, and
-              eventually started working with a partner. I had to leave the project as
-              I started college, but the project has evolved into an open source project
-              with thousands of commits and lives on to this day.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      $("#about-me-button").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#about-me").offset().top
-            }, 500);
-        });
-    </script>
-  
+<!DOCTYPE html>
+<html lang="en">
 
-</body></html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Kevin Fisher</title>
+
+	<link rel="stylesheet" type="text/css" 
+		href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		@media (min-width: 48em) {
+			.container {
+				max-width: 700px;
+			}
+		}
+
+		h2, h3, h4, h5, h6 {
+			margin-top: 11.5px;
+		}
+
+		h1 {
+			margin-top: 0px;
+		}
+
+		.page-header {
+			margin-top: 11.5px;
+		}
+
+		.small-top-margin {
+			margin-top: 25px;
+		}
+
+		.medium-top-margin {
+			margin-top: 50px;
+		}
+
+		.technology-subtext {
+			font-size: 9px;
+			color: grey;
+		}
+
+		.nav-link {
+			font-size: 16px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item"><a class="nav-link" href="mailto:me@kevinfisher.tech">Email</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- page contents -->
+	<div class="container">
+		<section id="aboutme">
+			<div class="jumbotron">
+				<h1>Kevin Fisher</h1>
+				<p>
+					I am a software developer from Memphis, Tennessee.
+				</p>
+				<p>
+					I currently have a full-time job, but regularly
+					take on freelancing projects on the side.
+				</p>
+		</section>
+
+		<section id="work">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>Work Experience</h4>
+				</div>
+
+				<div class="panel-body">
+					<div class="page-header">
+					    <h5>TruckPro <small>Memphis, TN</small><small class="pull-right">July 2016 &mdash; Ongoing</small></h5>
+					</div>
+					<p>
+						Brought on as a junior developer, but quickly became an important
+						part of the team. Furthered communication skills by both
+						leading some projects and taking a tertiary role in others. Developed solutions
+						for empowering the business drivers to do more.
+					</p>
+
+					<h6 class="small-top-margin">Projects and Achievements</h6>
+					<ul>
+						<li>
+							Led a full rewrite and redesign of the retail e-commerce website
+							using ASP.NET MVC, then expanded it to support the
+							wholesale side of business. <span class="technology-subtext">test</span>
+						</li>
+						<li>
+							Wrote a custom solution for managing report generation
+							and automated subscriptions to better suite the
+							company needs.
+						</li>
+						<li>
+							Migrated and optomized multiple web applications and supporting
+							scripts from outdated to modern frameworks.
+						</li>
+						<li>
+							Developed SSRS reports that empowered the sales division with new
+							information and tools.
+						</li>
+						<li>
+							Created solutions for adapting data from multiple database
+							systems and file formats into one central data store.
+						</li>
+					</ul>
+
+					<div class="page-header medium-top-margin">
+						<h5>PolicyPak <small>Remote</small><small class="pull-right">September 2016 &mdash; December 2016</small></h5>
+					</div>
+					<p>
+						Worked remotely with an international team on a client facing application.
+					</p>
+
+					<h6 class="small-top-margin">Projects and Achievements</h6>
+					<ul>
+						<li>
+							Fixed data-storage and graphical issues on a 
+							C#/C++ desktop application using Telerik UI for Winforms.
+						</li>
+						<li>
+							Worked with retrieving data from Group Policy.
+						</li>
+						<li>
+							Cooperated with QA team to verify changes and fix
+							any issues with submitted patches.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Contact</h4>
+					</div>
+					<div class="panel-body">
+						<p>
+							I am always interested in freelancing work on the side.
+							If you have a project you'd like to discuss, please
+							shoot me an email at <a href="mailto:me@kevinfisher.tech">me@kevinfisher.tech</a>,
+							and I will get back to you as soon as possible.
+						</p>
+					</div>
+				</div>
+			</section>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
