@@ -1,6 +1,76 @@
-.window-container {
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+* { 
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+.kf-window-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 700px) and (min-height: 550px) {
+    .kf-window-container {
+        transform: translate(-50%, -50%) scale(2, 2);
+    }
+}
+
+.kf-header {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.kf-window-content {
+    display: flex;
+}
+
+.kf-logo {
+    width: 48px;
+    height: 48px;
+    background: url('../img/1x/logo.png');
+    margin-right: 15px;
+}
+
+.kf-about {
+    display: flex;
+}
+
+.kf-about-table {
+    width: 100%;
+}
+
+.kf-about-table input[type="text"] {
+    width: 100%;
+}
+
+.kf-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.kf-button-spacer {
+    min-width: 5px;
+}
+
+#kf-background {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+}
+
+input[type="text"] {
+    pointer-events: none;
 }

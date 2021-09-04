@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>kev.fish 🐟</title>
+        <title>kev.fish</title>
+        <meta name="description" content="The personal website of Kevin Fisher, a software developer">
+        <meta name="keywords" content="Kevin Fisher, megabytefisher">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/98.css">
     </head>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/98.css">
 
-    <body style="margin: 0; padding: 0;">
-        <canvas id="canvas" style="display: block; height: 100vh; width: 100vw;"></canvas>
+    <body>
+        <canvas id="kf-background"></canvas>
 
-        <div class="window-container">
+        <div class="kf-window-container">
             <div class="window">
                 <div class="title-bar">
                     <div class="title-bar-text">kev.fish</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
                 </div>
 
-                <div class="window-body">
-                    <h4>Welcome to kev.fish!</h4>
-                    <p>I'm Kevin Fisher, and this is my website.</p>
-                    <p>I'm a software developer in Memphis, TN.</p>
-                    <p>
-                        <img src="img/underconstruction_sonic.gif">
-                        <img src="img/underconstruction_main.gif">
-                        <img src="img/underconstruction_sonic.gif">
-                    </p>
+                <div class="window-body" style="width: 300px;">
+                    <div class="kf-header">
+                        <div class="kf-logo"></div>
+                        <p style="font-weight: bold; font-size: 18px;">kev.fish</p>
+                    </div>
+
+                    <fieldset>
+                        <legend>About Me</legend>
+
+                        <table class="kf-about-table">
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" value="Kevin Fisher"></td>
+                            </tr>
+                                <td>Job title:</td>
+                                <td><input type="text" value="Software Developer"></td>
+                            <tr>
+                                <td>Location:</td>
+                                <td><input type="text" value="Memphis, TN"></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <div class="kf-buttons">
+                        <form action="https://github.com/megabytefisher">
+                            <button type="submit">My GitHub</button>
+                        </form>
+                        <div class="kf-button-spacer"></div>
+                        <form action="mailto:me@kev.fish" method="GET">
+                            <button type="submit">Email me</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

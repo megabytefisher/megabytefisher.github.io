@@ -8,11 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const imagePaths = {
-    fish: 'img/fish_0x2.png',
+    fish: 'img/2x/fish_0.png',
     bubbles: [
-        'img/bubble1x2.png',
-        'img/bubble2x2.png',
-        'img/bubble3x2.png'
+        'img/2x/bubble_0.png',
+        'img/2x/bubble_1.png',
+        'img/2x/bubble_2.png'
     ]
 };
 function loadImageAsync(src) {
@@ -34,18 +34,6 @@ class FishRenderer {
     constructor(targetCanvas) {
         this.canvas = targetCanvas;
         this.context = targetCanvas.getContext('2d');
-        this.baseTime = new Date();
-    }
-    drawImageRow(images, xOffset, yBase, xSpacing, rowHeight) {
-        const canvasWidth = this.canvas.width;
-        const effectiveWidth = Math.ceil(canvasWidth / xSpacing) * xSpacing + (xSpacing * 2);
-        const drawCount = effectiveWidth / xSpacing;
-        for (let i = 0; i < drawCount; i++) {
-            const image = images[i % images.length];
-            const x = (i * xSpacing + xOffset) % effectiveWidth - xSpacing + (xSpacing - image.width) / 2;
-            const y = yBase + (rowHeight - image.height) / 2;
-            this.context.drawImage(images[i % images.length], x, y);
-        }
     }
     start() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -93,24 +81,49 @@ class FishRenderer {
             window.requestAnimationFrame(() => this.draw());
         });
     }
-    resizeCanvas() {
-        let width = this.canvas.clientWidth;
-        let height = this.canvas.clientHeight;
-        if (this.canvas.width != width || this.canvas.height != height) {
-            console.log('resizing...');
-            this.canvas.width = width;
-            this.canvas.height = height;
-            return true;
-        }
-        return false;
-    }
     draw() {
         this.resizeCanvas();
         this.context.beginPath();
         this.context.fillStyle = '#000040';
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         let time = new Date();
-        let seconds = (time.getTime() - this.baseTime.getTime()) / 1000;
+        let seconds = time.getTime() / 1000;
+        this.drawBubbles(seconds);
+        this.drawFish(seconds);
+        window.requestAnimationFrame(() => this.draw());
+    }
+    drawImageRow(images, xOffset, yBase, xSpacing, rowHeight) {
+        const canvasWidth = this.canvas.width;
+        const effectiveWidth = Math.ceil(canvasWidth / xSpacing) * xSpacing + (xSpacing * 2);
+        const drawCount = effectiveWidth / xSpacing;
+        for (let i = 0; i < drawCount; i++) {
+            const image = images[i % images.length];
+            const x = (i * xSpacing + xOffset) % effectiveWidth - xSpacing + (xSpacing - image.width) / 2;
+            const y = yBase + (rowHeight - image.height) / 2;
+            this.context.drawImage(images[i % images.length], x, y);
+        }
+    }
+    resizeCanvas() {
+        let width = this.canvas.clientWidth;
+        let height = this.canvas.clientHeight;
+        if (this.canvas.width != width || this.canvas.height != height) {
+            this.canvas.width = width;
+            this.canvas.height = height;
+            return true;
+        }
+        return false;
+    }
+    drawFish(seconds) {
+        let fishSpeed = 40;
+        let fishWidth = this.fishImage.width;
+        let fishHeight = this.fishImage.height;
+        let fishBaseX = fishWidth * 2 - (seconds * fishSpeed % fishWidth * 2);
+        for (let fishBaseY = 0; fishBaseY < this.canvas.height; fishBaseY += fishHeight * 2) {
+            this.drawImageRow([this.fishImage], fishBaseX, fishBaseY, fishWidth * 2, fishHeight);
+            this.drawImageRow([this.fishImage], fishBaseX + fishWidth, fishBaseY + fishHeight, fishWidth * 2, fishHeight);
+        }
+    }
+    drawBubbles(seconds) {
         let bubbleSpeed = 80;
         let rowCount = Math.ceil((this.canvas.height + this.bubbleAreaHeight) / (this.bubbleAreaHeight * this.bubbleRows.length)) * this.bubbleRows.length;
         let effectiveHeight = rowCount * this.bubbleAreaHeight;
@@ -128,18 +141,10 @@ class FishRenderer {
             let bubbleBaseX = Math.sin(bubbleRow.wobbleSpeed * seconds) * bubbleRow.wobbleArea;
             this.drawImageRow(bubbleRow.images, bubbleBaseX, bubbleBaseY, this.bubbleAreaWidth, this.bubbleAreaHeight);
         }
-        let fishSpeed = 40;
-        let fishWidth = this.fishImage.width;
-        let fishHeight = this.fishImage.height;
-        let fishBaseX = fishWidth * 2 - (seconds * fishSpeed % fishWidth * 2);
-        for (let fishBaseY = 0; fishBaseY < this.canvas.height; fishBaseY += fishHeight * 2) {
-            this.drawImageRow([this.fishImage], fishBaseX, fishBaseY, fishWidth * 2, fishHeight);
-            this.drawImageRow([this.fishImage], fishBaseX + fishWidth, fishBaseY + fishHeight, fishWidth * 2, fishHeight);
-        }
-        window.requestAnimationFrame(() => this.draw());
     }
 }
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('kf-background');
+console.log(canvas);
 const renderer = new FishRenderer(canvas);
 renderer.start();
 //# sourceMappingURL=fish.js.map
