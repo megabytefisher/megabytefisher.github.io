@@ -49,6 +49,7 @@ body {
 
 .kf-about-table {
     width: 100%;
+    background-color: unset;
 }
 
 .kf-about-table input[type="text"] {
